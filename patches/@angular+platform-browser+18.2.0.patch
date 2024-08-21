@@ -1,0 +1,13 @@
+diff --git a/node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs b/node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs
+index d794732..17717ea 100755
+--- a/node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs
++++ b/node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs
+@@ -2019,7 +2019,7 @@ function provideZoneJsCompatibilityDetector() {
+                         'that uses a custom or a noop Zone.js implementation. ' +
+                         'This is not yet a fully supported configuration.');
+                     // tslint:disable-next-line:no-console
+-                    console.warn(message);
++                    //console.warn(message);
+                 }
+             },
+             multi: true,

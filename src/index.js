@@ -7,6 +7,7 @@ import { buildSveltekitHandler } from "./svelte.js";
 import { buildAstroHandler } from "./astro.js";
 import http from "node:http";
 import { getDuplicationFactor, logResultsTable } from "./result-format.js";
+import { buildAngularHandler } from "./angular.js";
 
 async function run(handler, collect = false) {
   const request = new IncomingMessage();
@@ -48,6 +49,11 @@ async function runHandlers(handlers) {
 }
 
 const handlers = [
+  {
+    name: "angular",
+    group: "frameworks",
+    handler: await buildAngularHandler(),
+  },
   {
     name: "solid",
     group: "renderers",

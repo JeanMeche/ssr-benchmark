@@ -1,0 +1,140 @@
+diff --git a/node_modules/@angular/platform-server/fesm2022/init.mjs b/node_modules/@angular/platform-server/fesm2022/init.mjs
+index 2bb2224..fc5c903 100755
+--- a/node_modules/@angular/platform-server/fesm2022/init.mjs
++++ b/node_modules/@angular/platform-server/fesm2022/init.mjs
+@@ -10,64 +10,7 @@ var __commonJS = (cb, mod) => function __require() {
+ };
+ 
+ // external/npm/node_modules/domino/lib/Event.js
+-var require_Event = __commonJS({
+-  "external/npm/node_modules/domino/lib/Event.js"(exports, module) {
+-    "use strict";
+-    module.exports = Event;
+-    Event.CAPTURING_PHASE = 1;
+-    Event.AT_TARGET = 2;
+-    Event.BUBBLING_PHASE = 3;
+-    function Event(type, dictionary) {
+-      this.type = "";
+-      this.target = null;
+-      this.currentTarget = null;
+-      this.eventPhase = Event.AT_TARGET;
+-      this.bubbles = false;
+-      this.cancelable = false;
+-      this.isTrusted = false;
+-      this.defaultPrevented = false;
+-      this.timeStamp = Date.now();
+-      this._propagationStopped = false;
+-      this._immediatePropagationStopped = false;
+-      this._initialized = true;
+-      this._dispatching = false;
+-      if (type)
+-        this.type = type;
+-      if (dictionary) {
+-        for (var p in dictionary) {
+-          this[p] = dictionary[p];
+-        }
+-      }
+-    }
+-    Event.prototype = Object.create(Object.prototype, {
+-      constructor: { value: Event },
+-      stopPropagation: { value: function stopPropagation() {
+-        this._propagationStopped = true;
+-      } },
+-      stopImmediatePropagation: { value: function stopImmediatePropagation() {
+-        this._propagationStopped = true;
+-        this._immediatePropagationStopped = true;
+-      } },
+-      preventDefault: { value: function preventDefault() {
+-        if (this.cancelable)
+-          this.defaultPrevented = true;
+-      } },
+-      initEvent: { value: function initEvent(type, bubbles, cancelable) {
+-        this._initialized = true;
+-        if (this._dispatching)
+-          return;
+-        this._propagationStopped = false;
+-        this._immediatePropagationStopped = false;
+-        this.defaultPrevented = false;
+-        this.isTrusted = false;
+-        this.target = null;
+-        this.type = type;
+-        this.bubbles = bubbles;
+-        this.cancelable = cancelable;
+-      } }
+-    });
+-  }
+-});
++var require_Event = () => Event;
+ 
+ // external/npm/node_modules/domino/lib/UIEvent.js
+ var require_UIEvent = __commonJS({
+diff --git a/node_modules/@angular/platform-server/fesm2022/platform-server.mjs b/node_modules/@angular/platform-server/fesm2022/platform-server.mjs
+index ca17e46..0b2f88b 100755
+--- a/node_modules/@angular/platform-server/fesm2022/platform-server.mjs
++++ b/node_modules/@angular/platform-server/fesm2022/platform-server.mjs
+@@ -18,64 +18,7 @@ var __commonJS = (cb, mod) => function __require() {
+ };
+ 
+ // external/npm/node_modules/domino/lib/Event.js
+-var require_Event = __commonJS({
+-  "external/npm/node_modules/domino/lib/Event.js"(exports, module) {
+-    "use strict";
+-    module.exports = Event;
+-    Event.CAPTURING_PHASE = 1;
+-    Event.AT_TARGET = 2;
+-    Event.BUBBLING_PHASE = 3;
+-    function Event(type, dictionary) {
+-      this.type = "";
+-      this.target = null;
+-      this.currentTarget = null;
+-      this.eventPhase = Event.AT_TARGET;
+-      this.bubbles = false;
+-      this.cancelable = false;
+-      this.isTrusted = false;
+-      this.defaultPrevented = false;
+-      this.timeStamp = Date.now();
+-      this._propagationStopped = false;
+-      this._immediatePropagationStopped = false;
+-      this._initialized = true;
+-      this._dispatching = false;
+-      if (type)
+-        this.type = type;
+-      if (dictionary) {
+-        for (var p in dictionary) {
+-          this[p] = dictionary[p];
+-        }
+-      }
+-    }
+-    Event.prototype = Object.create(Object.prototype, {
+-      constructor: { value: Event },
+-      stopPropagation: { value: function stopPropagation() {
+-        this._propagationStopped = true;
+-      } },
+-      stopImmediatePropagation: { value: function stopImmediatePropagation() {
+-        this._propagationStopped = true;
+-        this._immediatePropagationStopped = true;
+-      } },
+-      preventDefault: { value: function preventDefault() {
+-        if (this.cancelable)
+-          this.defaultPrevented = true;
+-      } },
+-      initEvent: { value: function initEvent(type, bubbles, cancelable) {
+-        this._initialized = true;
+-        if (this._dispatching)
+-          return;
+-        this._propagationStopped = false;
+-        this._immediatePropagationStopped = false;
+-        this.defaultPrevented = false;
+-        this.isTrusted = false;
+-        this.target = null;
+-        this.type = type;
+-        this.bubbles = bubbles;
+-        this.cancelable = cancelable;
+-      } }
+-    });
+-  }
+-});
++var require_Event = () => Event;
+ 
+ // external/npm/node_modules/domino/lib/UIEvent.js
+ var require_UIEvent = __commonJS({
